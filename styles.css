@@ -1,4 +1,4 @@
-ul {
+ul.nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -6,11 +6,11 @@ ul {
   background-color: #161b22;
 }
 
-ul li {
+ul.nav li{
   float: left;
 }
 
-ul li a {
+ul.nav li a {
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -20,7 +20,7 @@ ul li a {
   font-size: 25px;
 }
 
-ul li a:hover {
+ul.nav li a:hover {
   background-color: #111111;
 }
 
@@ -43,10 +43,45 @@ body {
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
-ul li a:hover,
+ul.nav li a:hover,
 .social-icon:hover i {
   color: #00f6ff;             /* neon cyan */
   transform: scale(1.2);       /* slight zoom */
   text-shadow: 0 0 8px #00f6ff, 0 0 15px #ff00ff; /* cyan + magenta glow */
   cursor: pointer;
+}
+
+.books li {
+  background-color: #161b22;      /* dark card */
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-left: 4px solid #00f6ff; /* neon left border */
+  box-shadow: 0 0 5px rgba(0, 246, 255, 0.3);
+  transition: all 0.3s ease;
+  font-size: 20px;
+  list-style-type: none;
+  color: white;
+}
+
+.books li a:visited{
+  color: white;
+}
+
+.books li a{
+  text-decoration: none;
+  display: block;  
+  color: white;
+}
+
+.books li:hover {
+  transform: translateX(10px); /* slide effect */
+  border-left-color: #ff00ff;  /* neon color change */
+  box-shadow: 0 0 15px #00f6ff, 0 0 25px #ff00ff;
+}
+
+img {
+  width: 300px;        /* set width */
+  height: auto;        /* maintain aspect ratio */
+  border-radius: 10px; /* rounded corners */
+  
 }
