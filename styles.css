@@ -86,12 +86,6 @@ img.showcase {
   border-radius: 10px; /* rounded corners */
 }
 
-.background {
-  position: relative;
-  height: 100vh;
-  background: url("/img/wallpaper1.jpg") center/cover no-repeat;
-}
-
 .overlay {
   position: absolute;
   inset: 0; /* covers the whole parent */
@@ -174,9 +168,9 @@ body {
 }
 
 footer {
-  min-height: 50px;
+  min-height: px;
   background: #161b22;
-  padding: 2rem;
+  padding: 0.5rem;
   display: flex;
 }
 
@@ -208,14 +202,16 @@ footer {
 }
 
 
-
-
 @media (max-width: 600px) {
   body {
     font-size: clamp(14px, 2vw, 18px);
   }
 
-  ul.nav li a {
+  ul.nav li a {.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
     font-size: 18px;  /* smaller nav on mobile */
   }
 
@@ -231,3 +227,27 @@ footer {
 
 }
 
+.wallpaper-container {
+    background-image: url('/img/wallpaper.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    min-height: 100vh; /* Makes the container take at least the full viewport height */
+    display: flex; /* Use flexbox for easy content centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: white; /* Set text color for contrast */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add some padding around the text */
+}
+
+.wallpaper-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.wallpaper-container p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
