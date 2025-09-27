@@ -24,11 +24,6 @@ ul.nav li a:hover {
   background-color: #111111;
 }
 
-body {
-  background-color: #0d1117; /* or hex (#3498db), rgb(), hsl() */
-  color: #e6edf3;
-  font-family: 'Roboto', sans-serif;
-}
 
 .socials {
   display: flex;
@@ -168,6 +163,10 @@ img.showcase {
 
 
 body {
+  background-color: #0d1117; /* or hex (#3498db), rgb(), hsl() */
+  color: #e6edf3;
+  font-family: 'Roboto', sans-serif;
+
   min-height: 100vh;
   margin: 0;
   display: grid;
@@ -207,3 +206,28 @@ footer {
   display: flex;
   flex-direction: column; /* ensures h2 above p */
 }
+
+
+
+
+@media (max-width: 600px) {
+  body {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  ul.nav li a {
+    font-size: 18px;  /* smaller nav on mobile */
+  }
+
+  .book {
+    flex-direction: column;
+    align-items: center; /* centers image and text */
+    text-align: center;  /* optional: center text */
+  }
+
+  .book img {
+    max-width: 80%;  /* let image shrink to fit */
+  }
+
+}
+
