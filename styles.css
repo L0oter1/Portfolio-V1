@@ -10,7 +10,7 @@ ul.nav li{
   float: left;
 }
 
-ul.nav li a {
+ul.nav li a{
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -79,9 +79,103 @@ ul.nav li a:hover,
   box-shadow: 0 0 15px #00f6ff, 0 0 25px #ff00ff;
 }
 
-img {
+img.cover {
   width: 300px;        /* set width */
   height: auto;        /* maintain aspect ratio */
   border-radius: 10px; /* rounded corners */
-  
+}
+
+img.showcase {
+  width: 500px;        /* set width */
+  height: 300px;        /* maintain aspect ratio */
+  border-radius: 10px; /* rounded corners */
+}
+
+.background {
+  position: relative;
+  height: 100vh;
+  background: url("/img/wallpaper1.jpg") center/cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0; /* covers the whole parent */
+  background: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+}
+
+.content {
+  position: relative;
+  color: white;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;       /* wrap cards on smaller screens */
+  gap: 20px;             /* space between cards */
+  justify-content: center;
+}
+
+.project-card {
+  background: white;
+  border: 2px solid #ccc;      /* scalable outline */
+  border-radius: 12px;
+  width: 300px;                 /* card width */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #0077ff;       /* color change on hover */
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+}
+
+.project-card h3{
+  color:black;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.project-info p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project-info a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: bold;
+}
+
+.project-info a:hover {
+  text-decoration: underline;
+}
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  min-height: 50px;
+  background: #161b22;
 }
