@@ -107,14 +107,13 @@ img.showcase {
   position: relative;
   color: white;
   padding: 2rem;
-  z-index: 1;
 }
 
 .projects-container {
   display: flex;
   flex-wrap: wrap;       /* wrap cards on smaller screens */
   gap: 20px;             /* space between cards */
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .project-card {
@@ -178,4 +177,31 @@ body {
 footer {
   min-height: 50px;
   background: #161b22;
+}
+
+#mellow {
+  width:50%;
+  height:auto;
+}
+
+.reading {
+  display: flex;
+  align-items: flex-start; /* aligns top of text with image */
+  gap: 20px;      
+}
+
+.book {
+  display: flex;        /* only this container is horizontal */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cover {
+  width: 150px;
+  height: auto;
+}
+
+.book-text {
+  display: flex;
+  flex-direction: column; /* ensures h2 above p */
 }
