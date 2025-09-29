@@ -123,7 +123,8 @@ img.showcase {
 }
 
 .project-card img {
-  width: 100%;
+  width: 400px;
+  height: 200px;
   display: block;
 }
 
