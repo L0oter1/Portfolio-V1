@@ -177,8 +177,10 @@ footer {
 }
 
 #mellow {
-  width:50%;
-  height:auto;
+  display: inline-block;
+  width: 200px;  /* optional, to keep them the same size */
+  height: 200px;
+  margin-right: 10px; /* space between images */
 }
 
 .reading {
@@ -204,7 +206,7 @@ footer {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   body {
     font-size: clamp(14px, 2vw, 18px);
   }
@@ -253,3 +255,6 @@ footer {
     font-size: 1.2em;
     line-height: 1.5;
 }
+
+
+  
