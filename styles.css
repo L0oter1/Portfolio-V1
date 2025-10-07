@@ -266,7 +266,6 @@ footer {
 }
 
 
-
 /* === Languages Section === */
 #languages {
   background-color: #0d1117;
@@ -301,6 +300,19 @@ footer {
   margin-bottom: 10px;
 }
 
+.language-item i:hover {
+  font-size: 60px;
+  color: #0b686b;
+  margin-bottom: 10px;
+}
+
 .language-item p {
+  font-size: 18px;
+}
+
+#description {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 0px; /* space from icons */
   font-size: 18px;
 }
