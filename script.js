@@ -3,49 +3,80 @@ const languageItems = document.querySelectorAll('.language-item');
   languageItems.forEach(item => {
     const icon = item.querySelector('i');  // icon inside the item
 
-
+    // js displays text depending on icon class
     icon.addEventListener('click', () => {
       const universalText = document.querySelectorAll('.language-container p'); 
       const allText = universalText[7]
         if (icon.classList.contains('fa-python')) {
-            allText.textContent = myData["python"];
+            allText.innerHTML = ` 
+            <ul>
+              <li>I have used Python for most of my Personal Projects.</li>
+              <li>Something that stood out to me was the amount of in a sense, non programming you have to do push code to production</li>
+              <li>One project I enjoyed was when I used Python test out the a type of Machine Learning Algorithm called NEAT.</li>
+              <li>A project I'm very proud of would be my discord music bot. </li>
+              <li>My friends used to bond over playing music for each other, so coding this was amazing.</li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
         else if (icon.classList.contains('fa-java')) {
-            allText.textContent = myData["java"];;
+            allText.innerHTML = ` 
+            <ul>
+              <li>My experience of Java came mostly from my basic programing classes in College. </li>
+              <li>I learned programming basics, OOP, data structures all in Java. </li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
         else if (icon.classList.contains('fa-html5')) {
-            allText.textContent = myData["html"];;
+            allText.innerHTML = ` 
+            <ul>
+              <li>My HTML knowledge came from the first internship I ever had at Opportunities for All</li>
+              <li>At that internship I learned the basics of Web Dev and also some soft skills</li>
+              <li>The rest of my HTML knowledge came from this personal website I made without anything fancy</li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
         else if (icon.classList.contains('fa-css3-alt')) {
-            allText.textContent = myData["css"];;
+            allText.innerHTML = ` 
+            <ul>
+              <li>Similar to the previous statement, my css came from my first evern internship in high school.</li>
+              <li>CSS really is hard to learn as there are so many ways to change element styles,</li>
+              <li>This project has taught me a lot about CSS however I know I can always learn more</li>
+              <li> So if you have any feedback feel free to reach out to me, I'd love to learn</li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
         else if (icon.classList.contains('fa-js-square')) {
-            allText.textContent = myData["js"];;
+            allText.innerHTML = ` 
+            <ul>
+              <li>My JS knowledge is limited as I haven't had the opportunity to use JS that much. </li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
         else if (icon.classList.contains('devicon-cplusplus-plain')) {
-            allText.textContent = myData["Cplus"];;
+            allText.innerHTML = ` 
+            <ul>
+              <li>My C++ knowledge comes from my computer structure class, CSE 30 where we used ARM and C++ to code</li>
+              <li>It was really cool seeing one of the basic programming languages and learning about memory management</li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
         else if (icon.classList.contains('devicon-git-plain')) {
-            allText.textContent = myData["git"];;
+            allText.innerHTML = ` 
+            <ul>
+              <li>I learned git mostly from my CSE 110 class of Software Development where Git is a good project management service</li>
+              <li>I learned more of what git is and how to properly branch on github with git. This website is also published with github pages</li>
+              <li> Interesting thing I learned, git is not gitHub</li>
+            </ul>
+            `;
             allText.style.display = 'block'; // show it
         }
     });
   });
 
-const myData = {
-  python: `Most of my personal projects use python. I've used python at my internship to write code that helped with military testing. I've also used python to learn about supervised machine learning in class. My personal projects
-  include learning how to make a discord bot to play music for my friends personal server and other fun projects I code on the side.`,
-  java: `My experience of Java comes from my classes as most beginning programming classes at UCSD start with Java as the base. My foundations for Java began in AP CS A back in highschool. `,
-  html: `My experience came from my first internship with Opportunities for All where I learned progrmaming for html. I also learned a lot making this personal website, and my school project for CSE 110 `,
-  css: `CSS is very interesting. I mainly learned CSS through making this website you're reading now so if you have any feedback feel free to let me know such as how I can improve my CSS`, 
-  js: `JS is really fun but challenging. I often try to avoid JS if I can help it but I think it has a lot of possibilities.`,
-  Cplus: `My experience with C++ came from my CSE 30 class where we learned the basics of computers and their memory. In that class I also learned quite a bit about ARM assembly and memory management`, 
-  git: `Learned the most about Git from CSE 110 where we learned how the Agile development process and best practices within the industry is to use Git to track changes and be able to cooperate`
-};
 
