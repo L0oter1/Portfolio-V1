@@ -53,8 +53,8 @@ ul.nav a:hover,
 /* Create book tabs for when you hover */
 .books li {
   background-color: #161b22;      /* dark card */
-  margin: 10px 0;
-  padding: 15px 20px;
+  margin: 10px ;
+  padding: 15px ;
   border-left: 4px solid #00f6ff; /* neon left border */
   box-shadow: 0 0 5px rgba(0, 246, 255, 0.3);
   transition: all 0.3s ease;
@@ -167,7 +167,6 @@ body {
   background-color: #0d1117; /* or hex (#3498db), rgb(), hsl() */
   color: #e6edf3;
   font-family: 'Roboto', sans-serif;
-
   min-height: 100vh;
   margin: 0;
   display: grid;
@@ -175,7 +174,7 @@ body {
 }
 
 footer {
-  min-height: px;
+  padding-top: 40px;
   background: #161b22;
   padding: 0.5rem;
   display: flex;
@@ -315,4 +314,34 @@ footer {
   text-align: center;
   margin-top: 0px; /* space from icons */
   font-size: 18px;
+  min-height: 180px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 50px; /* space before footer */
+}
+
+#description ul{
+  list-style-type: none;
+}
+
+.tbd {
+  font-size: 0.9rem;
+  color: rgba(216, 56, 56, 0.849);
+  margin: 0px; /* removes extra spacing */
+}
+
+.date {
+  font-size: 0.9rem;
+  color: rgba(48, 212, 48, 0.849);
+  margin: 0px; /* removes extra spacing */
+}
+
+/* Works for most modern browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
