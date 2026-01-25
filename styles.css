@@ -194,9 +194,8 @@ footer {
 }
 
 .book {
-  display: flex;        /* only this container is horizontal */
-  align-items: flex-start;
-  gap: 20px;
+  display: flex;
+  flex-direction: column; /* stack rows */
 }
 
 .cover {
@@ -206,7 +205,13 @@ footer {
 
 .book-text {
   display: flex;
-  flex-direction: column; /* ensures h2 above p */
+  flex-direction: column; 
+  
+}
+
+.book-images {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Make website usable for different screens ie phone etc*/
@@ -224,7 +229,6 @@ footer {
   }
 
   .book {
-    flex-direction: column;
     align-items: center; /* centers image and text */
     text-align: center;  /* optional: center text */
   }
