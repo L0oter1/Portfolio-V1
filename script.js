@@ -1,12 +1,11 @@
 const languageItems = document.querySelectorAll('.language-item');
 
-  languageItems.forEach(item => {
-    const icon = item.querySelector('i');  // icon inside the item
+languageItems.forEach(item => {
+    const icon = item.querySelector('i');
 
-    // js displays text depending on icon class
     icon.addEventListener('click', () => {
-      const universalText = document.querySelectorAll('.language-container p'); 
-      const allText = universalText[7]
+        const universalText = document.querySelectorAll('.language-container p');
+        const allText = universalText[7];
         if (icon.classList.contains('fa-python')) {
             allText.innerHTML = ` 
             <ul>
@@ -77,6 +76,6 @@ const languageItems = document.querySelectorAll('.language-item');
             allText.style.display = 'block'; // show it
         }
     });
-  });
+});
 
 
