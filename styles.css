@@ -135,10 +135,12 @@ footer {
 }
 
 /* Specific book title colors */
+h1.books-elon,
 .books-elon h1 {
   color: #15be86;
 }
 
+h1.books-rich,
 .books-rich h1 {
   color: #e2c51e;
 }
@@ -208,7 +210,7 @@ img.cover:hover {
 /* ====================================== */
 
 .wallpaper-container {
-  background-image: url('/img/wallpaper.jpg');
+  background-image: url('img/wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
