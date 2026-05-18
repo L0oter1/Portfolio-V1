@@ -1,4 +1,33 @@
-/* Setting NavBar properties */
+/* ====================================== */
+/* RESET & BASE STYLES                    */
+/* ====================================== */
+
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* ====================================== */
+/* NAVIGATION BAR                         */
+/* ====================================== */
+
 ul.nav {
   list-style-type: none;
   margin: 0;
@@ -7,55 +36,150 @@ ul.nav {
   background-color: #161b22;
 }
 
-/* Makes nav bar go from left to right */
-ul.nav li{
+ul.nav li {
   float: left;
 }
 
-/* Aligning Links in NavBar */
-ul.nav a{
+ul.nav a {
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   color: white;
-  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
   font-size: 25px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* On hover, make background darker */
 ul.nav a:hover {
   background-color: #111111;
-}
-
-/* Social on footer styling */
-.socials {
-  display: flex;
-  gap: 20px; 
-  align-items: center;
-}
-
-/* Make transitions for I elemtn hover smooth*/
-.social-icon i {
-  font-size: 35px;            
-  color: gray;                
-  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Make hover animation for nav and foot same */
-ul.nav a:hover,
-.social-icon i:hover {
-  color: #00f6ff;            
-  transform: scale(1.1);       
+  color: #00f6ff;
+  transform: scale(1.1);
   cursor: pointer;
 }
 
-/* Create book tabs for when you hover */
+/* ====================================== */
+/* FOOTER & SOCIAL ICONS                 */
+/* ====================================== */
+
+footer {
+  padding-top: 40px;
+  padding: 0.5rem;
+  background: #161b22;
+  display: flex;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icon i {
+  font-size: 35px;
+  color: gray;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon i:hover {
+  color: #00f6ff;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ====================================== */
+/* BOOKS & READING SECTION                */
+/* ====================================== */
+
+.reading {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.book {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.book--stacked {
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.crown-series {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.crown-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  width: 180px;
+}
+
+.book-text {
+  max-width: 800px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.book-text h1 {
+  color: #00f6ff;
+  margin-top: 0;
+}
+
+/* Specific book title colors */
+.books-elon h1 {
+  color: #15be86;
+}
+
+.books-rich h1 {
+  color: #e2c51e;
+}
+
+.book-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cover {
+  width: 150px;
+  height: auto;
+}
+
+img.cover {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+img.cover:hover {
+  transform: scale(1.05);
+}
+
+#mellow {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+}
+
 .books li {
-  background-color: #161b22;      /* dark card */
-  margin: 10px ;
-  padding: 15px ;
-  border-left: 4px solid #00f6ff; /* neon left border */
+  background-color: #161b22;
+  margin: 10px;
+  padding: 15px;
+  border-left: 4px solid #00f6ff;
   box-shadow: 0 0 5px rgba(0, 246, 255, 0.3);
   transition: all 0.3s ease;
   font-size: 20px;
@@ -64,77 +188,122 @@ ul.nav a:hover,
   max-width: 600px;
 }
 
-/* Visited links must still be white  */
-.books li a:visited{
+.books li a {
+  text-decoration: none;
+  display: block;
   color: white;
 }
 
-.books li a{
-  text-decoration: none;
-  display: block;  
+.books li a:visited {
   color: white;
 }
 
 .books li:hover {
-  transform: translateX(10px); /* slide effect */
-  border-left-color: #ff00ff;  /* neon color change */
+  transform: translateX(10px);
+  border-left-color: #ff00ff;
 }
 
-img.cover {
-  width: 300px;        /* set width */
-  height: auto;        /* maintain aspect ratio */
-  border-radius: 10px; /* rounded corners */
+/* ====================================== */
+/* HERO & WALLPAPER                       */
+/* ====================================== */
+
+.wallpaper-container {
+  background-image: url('/img/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-img.showcase {
-  width: 500px;        /* set width */
-  height: 300px;        /* maintain aspect ratio */
-  border-radius: 10px; /* rounded corners */
+.wallpaper-container h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.wallpaper-container p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .overlay {
   position: absolute;
-  inset: 0; /* covers the whole parent */
-  background: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .content {
   position: relative;
   color: white;
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
 }
+
+/* ====================================== */
+/* PROJECTS SECTION                       */
+/* ====================================== */
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap;       /* wrap cards on smaller screens */
-  gap: 20px;             /* space between cards */
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: flex-start;
 }
 
 .project-card {
-  background: white;
-  border: 2px solid #ccc;      /* scalable outline */
+  background: #161b22;
+  border: 2px solid #30363d;
   border-radius: 12px;
-  width: 300px;                 /* card width */
+  width: 300px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, border-color 0.3s;
   cursor: pointer;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  border-color: #0077ff;       /* color change on hover */
+  border-color: #00f6ff;
 }
 
 .project-card img {
-  width: 400px;
+  width: 100%;
   height: 200px;
   display: block;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
 }
 
-.project-card h3{
-  color:black;
+.project-image-placeholder {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d1117;
+  color: #8b949e;
+  font-weight: 600;
+}
+
+.project-card h3 {
+  color: #00f6ff;
 }
 
 .project-info {
@@ -148,13 +317,13 @@ img.showcase {
 
 .project-info p {
   font-size: 0.95em;
-  color: #555;
+  color: #e6edf3;
   margin-bottom: 10px;
 }
 
 .project-info a {
   text-decoration: none;
-  color: #0077ff;
+  color: #00f6ff;
   font-weight: bold;
 }
 
@@ -162,114 +331,21 @@ img.showcase {
   text-decoration: underline;
 }
 
-
-body {
-  background-color: #0d1117; /* or hex (#3498db), rgb(), hsl() */
-  color: #e6edf3;
-  font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
-  margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-footer {
-  padding-top: 40px;
-  background: #161b22;
-  padding: 0.5rem;
-  display: flex;
-}
-
-#mellow {
-  display: inline-block;
-  width: 200px;  /* optional, to keep them the same size */
-  height: 200px;
-  margin-right: 10px; /* space between images */
-}
-
-.reading {
-  display: flex;
-  align-items: flex-start; /* aligns top of text with image */
-  gap: 20px;      
-}
-
-.book {
-  display: flex;
-  flex-direction: column; /* stack rows */
-}
-
-.cover {
-  width: 150px;
-  height: auto;
-}
-
-.book-text {
-  display: flex;
-  flex-direction: column; 
-  
-}
-
-.book-images {
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Make website usable for different screens ie phone etc*/
-@media (max-width: 800px) {
-  body {
-    font-size: clamp(14px, 2vw, 18px);
-  }
-
-  ul.nav li a {.hero-img {
+img.showcase {
+  max-width: 500px;
   width: 100%;
   height: auto;
-  display: block;
-}
-    font-size: 18px;  /* smaller nav on mobile */
-  }
-
-  .book {
-    align-items: center; /* centers image and text */
-    text-align: center;  /* optional: center text */
-  }
-
-  .book img {
-    max-width: 80%;  /* let image shrink to fit */
-  }
-
+  border-radius: 10px;
 }
 
-.wallpaper-container {
-    background-image: url('/img/wallpaper.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image repetition */
-    min-height: 100vh; /* Makes the container take at least the full viewport height */
-    display: flex; /* Use flexbox for easy content centering */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    color: white; /* Set text color for contrast */
-    text-align: center; /* Center align text */
-    padding: 20px; /* Add some padding around the text */
-}
-
-.wallpaper-container h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.wallpaper-container p {
-    font-size: 1.2em;
-    line-height: 1.5;
-}
+/* ====================================== */
+/* LANGUAGES & SKILLS SECTION             */
+/* ====================================== */
 
 .skills {
-  text-align:center
+  text-align: center;
 }
 
-
-/* === Languages Section === */
 #languages {
   background-color: #0d1117;
   color: white;
@@ -279,10 +355,9 @@ footer {
 
 #languages h2 {
   font-size: 2.2rem;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
-/* Flex container for icons */
 .language-container {
   display: flex;
   flex-wrap: wrap;
@@ -290,7 +365,6 @@ footer {
   gap: 40px;
 }
 
-/* Individual language item */
 .language-item {
   display: flex;
   flex-direction: column;
@@ -301,12 +375,11 @@ footer {
   font-size: 60px;
   color: #2bcdd3;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .language-item i:hover {
-  font-size: 60px;
   color: #0b686b;
-  margin-bottom: 10px;
 }
 
 .language-item p {
@@ -316,36 +389,82 @@ footer {
 #description {
   flex-basis: 100%;
   text-align: center;
-  margin-top: 0px; /* space from icons */
+  margin-top: 0;
   font-size: 18px;
   min-height: 180px;
   max-height: 200px;
   overflow-y: auto;
-  margin-bottom: 50px; /* space before footer */
+  margin-bottom: 50px;
 }
 
-#description ul{
+#description ul {
   list-style-type: none;
 }
 
 .tbd {
   font-size: 0.9rem;
   color: rgba(216, 56, 56, 0.849);
-  margin: 0px; /* removes extra spacing */
+  margin: 0;
 }
 
 .date {
   font-size: 0.9rem;
   color: rgba(48, 212, 48, 0.849);
-  margin: 0px; /* removes extra spacing */
+  margin: 0;
 }
 
-/* Works for most modern browsers */
-::-webkit-scrollbar {
-  display: none;
+/* ====================================== */
+/* RESPONSIVE DESIGN                      */
+/* ====================================== */
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 1.5rem;
+  }
+  .projects-container {
+    justify-content: center;
+  }
 }
 
-html, body {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+@media (max-width: 768px) {
+  body {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  ul.nav li a {
+    font-size: 18px;
+  }
+
+  .book {
+    align-items: center;
+    text-align: center;
+  }
+
+  .crown-book {
+    align-items: center;
+    text-align: center;
+  }
+
+  .book img {
+    max-width: 80%;
+  }
+
+  .language-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wallpaper-container h1 {
+    font-size: 2em;
+  }
+  
+  ul.nav a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .socials {
+    gap: 10px;
+  }
 }
