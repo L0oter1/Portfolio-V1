@@ -3,96 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Projects &middot; Jeffrey Thi</title>
+    <meta name="description" content="Projects by Jeffrey Thi: hackathon wins, machine learning experiments, and trading tools.">
+    <meta name="author" content="Jeffrey Thi">
+    <meta name="theme-color" content="#0d1117">
 
     <!-- Favicon -->
-    <link rel="icon" href="../img/jeff.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../img/jeff.ico" type="image/x-icon">
 
-    <!-- Optional: Meta Tags -->
-    <meta name="description" content="Projects Portfolio Page">
-    <meta name="author" content="Jeffrey Thi">
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav class="nav">
-            <ul class="nav">
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark" aria-hidden="true">JT</span>
+                <span class="brand-name">Jeffrey Thi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="project.html">Projects</a></li>
+                <li><a href="project.html" class="active" aria-current="page">Projects</a></li>
                 <li><a href="book.html">Books</a></li>
+                <li><a href="writing.html">Writing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main class="content">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="../img/stock.png" alt="Trading Picture">
-                <div class="project-info">
-                    <h3>Trading Analysis</h3>
-                    <p>Vibe Coded To Oblivion on Lovable App Developer. Includes: <br>
-                        - Momentum <br>
-                        - SMA 20, 50, 200 <br>
-                        - SL/TP calculator <br>
-                        - Market Scanner <br>
-                        - Entry Indicators <br>
-                    </p>
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <p class="eyebrow">Projects</p>
+                <h1>Things I've built</h1>
+                <p class="lead">Hackathon projects, machine learning experiments, and tools I built to scratch my own itch. Most of them live on GitHub.</p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="cards cards-2">
+                    <article class="card reveal">
+                        <a class="card-media" href="https://devpost.com/software/enviroskin" target="_blank" rel="noopener">
+                            <img src="../img/enviroskin.png" alt="EnviroSkin on Devpost with a winner ribbon" loading="lazy">
+                        </a>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag tag-accent">2nd place</span>
+                                <span class="tag">DataHacks 2026</span>
+                                <span class="tag">LLM</span>
+                                <span class="tag">ML</span>
+                            </div>
+                            <h3><a href="https://github.com/2339140098NC/EnviroSkin" target="_blank" rel="noopener">EnviroSkin</a></h3>
+                            <p>DataHacks 2026. Uses LLM wrapping and a machine learning model to identify skin conditions. Won 2nd place in the Entrepreneur track.</p>
+                            <div class="card-links">
+                                <a class="icon-link" href="https://github.com/2339140098NC/EnviroSkin" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+                                <a class="icon-link" href="https://devpost.com/software/enviroskin" target="_blank" rel="noopener"><i class="fas fa-trophy" aria-hidden="true"></i> Devpost</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-delay="1">
+                        <div class="card-media">
+                            <img src="../img/stock.png" alt="Trading analysis dashboard with candlestick chart and indicators" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag">Lovable</span>
+                                <span class="tag">Finance</span>
+                                <span class="tag">Indicators</span>
+                            </div>
+                            <h3>Trading Analysis</h3>
+                            <p>Vibe coded to oblivion on Lovable. Includes:</p>
+                            <ul class="card-list">
+                                <li>Momentum</li>
+                                <li>SMA 20, 50, 200</li>
+                                <li>Stop-loss / take-profit calculator</li>
+                                <li>Market scanner</li>
+                                <li>Entry indicators</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-delay="2">
+                        <a class="card-media" href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank" rel="noopener">
+                            <img src="../img/flappy.png" alt="NEAT Flappy Bird running in PyGame next to its Python source" loading="lazy">
+                        </a>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">PyGame</span>
+                                <span class="tag">NEAT</span>
+                            </div>
+                            <h3><a href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank" rel="noopener">NEAT Flappy Bird</a></h3>
+                            <p>Exploration of NeuroEvolution of Augmenting Topologies (NEAT) by implementing Flappy Bird with PyGame and testing out different learning functions.</p>
+                            <div class="card-links">
+                                <a class="icon-link" href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-delay="3">
+                        <a class="card-media" href="https://github.com/L0oter1/Discord-Music-Bot-V2" target="_blank" rel="noopener">
+                            <img src="../img/bot.png" alt="Discord chat showing the music bot responding to pause, resume, skip and queue commands" loading="lazy">
+                        </a>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Discord API</span>
+                                <span class="tag">YouTube</span>
+                            </div>
+                            <h3><a href="https://github.com/L0oter1/Discord-Music-Bot-V2" target="_blank" rel="noopener">YouTube Music Bot</a></h3>
+                            <p>Self-study of Python and the Discord API following a tutorial. Implemented additional link, queue listing, and duration listing features.</p>
+                            <div class="card-links">
+                                <a class="icon-link" href="https://github.com/L0oter1/Discord-Music-Bot-V2" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="../img/enviroskin.png" alt="EnviroSkin">
-                <div class="project-info">
-                    <h3>EnviroSkin</h3>
-                    <p>DataHacks 2026 Use LLM wrapping and machine learning model to identify skin conditions 
-                        <br>
-                        <br>
-                        <a href="https://devpost.com/software/enviroskin" target="_blank">Won 2nd Place Entreprenuer Track</a>
-                    </p>
-                    <a href="https://github.com/2339140098NC/EnviroSkin" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="../img/flappy.png" alt="Flappy Bird Picture">
-                <div class="project-info">
-                    <h3>NEAT Flappy Bird</h3>
-                    <p>Exploration of NeuroEvolution of Augmenting Topologies(NEAT) by implementing flappy bird with PyGame and testing out different learning functions
-                    </p>
-                    <a href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="../img/bot.png" alt="Picture of Discord Bot">
-                <div class="project-info">
-                    <h3>Youtube Music Bot</h3>
-                    <p>Self study of Python and discord API following tutorial. Implemented additional link, queue listing, and duration listing feature</p>
-                    <a href="https://github.com/L0oter1/Discord-Music-Bot-V2" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="socials">
-            <a href="https://github.com/L0oter1" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
             <p>Designed and Created by Jeffrey Thi</p>
+            <div class="socials">
+                <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="contact.html" aria-label="Contact">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
     <script src="../script.js"></script>
-
 </body>
 </html>

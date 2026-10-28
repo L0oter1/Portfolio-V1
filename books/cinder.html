@@ -3,74 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeffrey Thi</title>
+    <title>Cinder Series &middot; Jeffrey Thi</title>
+    <meta name="description" content="Book review: Cinder, Scarlet, Cress, Winter">
+    <meta name="author" content="Jeffrey Thi">
+    <meta name="theme-color" content="#0d1117">
 
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../img/jeff.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="../img/jeff.ico" type="image/x-icon">
-
-    <!-- Optional: Meta Tags -->
-    <meta name="description" content="Book Review: Cinder">
-    <meta name="author" content="Jeffrey Thi">
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul class="nav">
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark" aria-hidden="true">JT</span>
+                <span class="brand-name">Jeffrey Thi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../src/project.html">Projects</a></li>
-                <li><a href="../src/book.html">Books</a></li>
+                <li><a href="../src/book.html" class="active">Books</a></li>
+                <li><a href="../src/writing.html">Writing</a></li>
                 <li><a href="../src/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main class="content">
-        <div class="book">
-            <img src="../img/cinder.jpg" class="cover">
-            <div class="book-text">
+    <main class="container review">
+        <a class="back-link" href="../src/book.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> All books</a>
+
+        <div class="review-layout">
+            <aside class="review-cover reveal">
+                <img src="../img/cinder.jpg" alt="Cinder cover">
+                <div class="meta">
+                    <span>Reviewed</span>
+                    <strong>Mar 13, 2026</strong>
+                </div>
+            </aside>
+
+            <article class="review-body reveal" data-delay="1">
+                <p class="eyebrow">Book review</p>
                 <h1>Cinder, Scarlet, Cress, Winter</h1>
+                <p class="byline">The Lunar Chronicles, by Marissa Meyer</p>
+
                 <p>
-                Found Cinder series by looking for Young Adult Novels similar to 3 Dark Crown series. I was looking for a book with a story of 
-                supernatural powers and power struggles. This book satisfied that craving which is why I actually finished it in the span of a couple weeks and am just writing
-                a review now. <br>
-                <br>
-                I actually don't remember much about this other than that each protagonist follows a specific 
-                fairy tale story. Cinder is the Cinderella story, Scarlet is the Little Red Riding Hood story, and Cress is the Rapunzel story. 
-                I think the book was good at using the original fairy tales and adding a twist to it. <br>
-                <br>
-                I don't have much more to write. It just overall feels like an anime and also have themes similar to avatar the last airbender where 
-                you come together with a team and the main character has to face a lot of challenges with growing up in a sense. <br>
-            </p>
-            </div>
+                    Found Cinder series by looking for Young Adult Novels similar to 3 Dark Crown series. I was looking for a book with a story of
+                    supernatural powers and power struggles. This book satisfied that craving which is why I actually finished it in the span of a couple weeks and am just writing
+                    a review now.
+                </p>
+                <p>
+                    I actually don't remember much about this other than that each protagonist follows a specific
+                    fairy tale story. Cinder is the Cinderella story, Scarlet is the Little Red Riding Hood story, and Cress is the Rapunzel story.
+                    I think the book was good at using the original fairy tales and adding a twist to it.
+                </p>
+                <p>
+                    I don't have much more to write. It just overall feels like an anime and also have themes similar to avatar the last airbender where
+                    you come together with a team and the main character has to face a lot of challenges with growing up in a sense.
+                </p>
+            </article>
         </div>
+
+        <nav class="review-nav" aria-label="More reviews">
+            <a class="prev" href="crown.html"><span>Older</span><strong>Three Dark Crowns</strong></a>
+            <a class="next" href="how_to_swing_trade.html"><span>Newer</span><strong>How to Swing Trade</strong></a>
+        </nav>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="socials">
-            <!-- GitHub -->
-            <a href="https://github.com/L0oter1" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a>
-        
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
             <p>Designed and Created by Jeffrey Thi</p>
+            <div class="socials">
+                <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="../src/contact.html" aria-label="Contact"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            </div>
         </div>
-
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="script.js"></script>
-
+    <script src="../script.js"></script>
 </body>
 </html>

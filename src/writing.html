@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing &middot; Jeffrey Thi</title>
+    <meta name="description" content="Essays and philosophy by Jeffrey Thi.">
+    <meta name="author" content="Jeffrey Thi">
+    <meta name="theme-color" content="#0d1117">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../img/jeff.ico" type="image/x-icon">
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark" aria-hidden="true">JT</span>
+                <span class="brand-name">Jeffrey Thi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="book.html">Books</a></li>
+                <li><a href="writing.html" class="active" aria-current="page">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <p class="eyebrow">Writing</p>
+                <h1>Philosophy</h1>
+                <!-- EDIT ME: a line or two about what this section is for. -->
+                <p class="lead">Essays and half-formed thoughts on how to live, work, and think. Written for myself first, shared in case they are useful to you.</p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <!-- ============================================================
+                     ESSAY LIST. Newest first. To add an essay, copy one
+                     <a class="essay-row"> block, change the href, date, title
+                     and one-line summary, and create the matching page in
+                     ../writing/ (copy ../writing/uncomfortable.html).
+                     ============================================================ -->
+                <div class="essay-list narrow reveal">
+                    <a class="essay-row" href="../writing/uncomfortable.html">
+                        <span class="meta">Oct 27, 2026</span>
+                        <div>
+                            <h3>On being uncomfortable</h3>
+                            <p>Why my theme for the year is doing the thing that makes me squirm.</p>
+                        </div>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Designed and Created by Jeffrey Thi</p>
+            <div class="socials">
+                <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="contact.html" aria-label="Contact">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

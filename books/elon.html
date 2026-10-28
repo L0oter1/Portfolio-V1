@@ -3,80 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeffrey Thi</title>
+    <title>Elon Musk &middot; Jeffrey Thi</title>
+    <meta name="description" content="Book review: Elon Musk">
+    <meta name="author" content="Jeffrey Thi">
+    <meta name="theme-color" content="#0d1117">
 
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../img/jeff.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="../img/jeff.ico" type="image/x-icon">
-
-    <!-- Optional: Meta Tags -->
-    <meta name="description" content="Book Review: Elon Musk">
-    <meta name="author" content="Jeffrey Thi">
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul class="nav">
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark" aria-hidden="true">JT</span>
+                <span class="brand-name">Jeffrey Thi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../src/project.html">Projects</a></li>
-                <li><a href="../src/book.html">Books</a></li>
+                <li><a href="../src/book.html" class="active">Books</a></li>
+                <li><a href="../src/writing.html">Writing</a></li>
                 <li><a href="../src/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main class="content">
-        <div class="book">
-            <img src="../img/elon.jpg" class="cover">
-            <div class="book-text">
-                <h1 class="books-elon">Elon Musk</h1>
+    <main class="container review" style="--accent-page: #15be86;">
+        <a class="back-link" href="../src/book.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> All books</a>
+
+        <div class="review-layout">
+            <aside class="review-cover reveal">
+                <img src="../img/elon.jpg" alt="Elon Musk cover">
+                <div class="meta">
+                    <span>Reviewed</span>
+                    <strong>Oct 2, 2025</strong>
+                </div>
+            </aside>
+
+            <article class="review-body reveal" data-delay="1">
+                <p class="eyebrow">Book review</p>
+                <h1>Elon Musk</h1>
+                <p class="byline">by Walter Isaacson</p>
+
                 <p>
-                I listened to the audiobook version of this book my sophmore year of college. Manytimes at night when I'm bored but couldn't sleep, I would lie on my
-                bed and listen to audiobooks. This was one of them. <br>
-                <br>
-                I don't think just one experience or choice no matter how big or small make up the person. From what I've heard from this book, I see a lot of Elon's father's personality
-                in my own father. <br>
-                <br>
-                Instead of focusing on the person, I'd much rather focus on the attitude. What I've come to realize from this book is that Elon is a doer. It might've been how the book
-                was written with Walter Isaacson's writing being extremely succinct, however it felt to me that each of Elon's decisions were simply done. <br>
-                <br>
-                When he wanted to move to America, he just did. There was no internal monologue about the pros and cons. Or when he started a startup with his brother there was no
-                what will we do next. There was only, go. <br>
-                <br>
-                It truly shocked me how direct Elon can be both in his actions and his words, and has made me consider how I should act personally. I don't necessarily think you must
-                act like Elon to achieve what he did as success requires a lot of luck and action. However, I think it is worth considering the pros and cons of the life Elon either chooses
-                or has to live. That being the extreme stress he puts himself under everyday. To throw so much time with family to focus on a righteous goal of bettering humanity. <br>
-                <br>
-                I'm not sure what the answer is, but it has allowed me to think more about how I live my life and what kind of life I want to live for myself. 
-            </div>
+                    I listened to the audiobook version of this book my sophmore year of college. Manytimes at night when I'm bored but couldn't sleep, I would lie on my
+                    bed and listen to audiobooks. This was one of them.
+                </p>
+                <p>
+                    I don't think just one experience or choice no matter how big or small make up the person. From what I've heard from this book, I see a lot of Elon's father's personality
+                    in my own father.
+                </p>
+                <p>
+                    Instead of focusing on the person, I'd much rather focus on the attitude. What I've come to realize from this book is that Elon is a doer. It might've been how the book
+                    was written with Walter Isaacson's writing being extremely succinct, however it felt to me that each of Elon's decisions were simply done.
+                </p>
+                <p>
+                    When he wanted to move to America, he just did. There was no internal monologue about the pros and cons. Or when he started a startup with his brother there was no
+                    what will we do next. There was only, go.
+                </p>
+                <p>
+                    It truly shocked me how direct Elon can be both in his actions and his words, and has made me consider how I should act personally. I don't necessarily think you must
+                    act like Elon to achieve what he did as success requires a lot of luck and action. However, I think it is worth considering the pros and cons of the life Elon either chooses
+                    or has to live. That being the extreme stress he puts himself under everyday. To throw so much time with family to focus on a righteous goal of bettering humanity.
+                </p>
+                <p>
+                    I'm not sure what the answer is, but it has allowed me to think more about how I live my life and what kind of life I want to live for myself.
+                </p>
+            </article>
         </div>
+
+        <nav class="review-nav" aria-label="More reviews">
+            <a class="prev" href="art.html"><span>Older</span><strong>The Subtle Art of Not Giving a F*ck</strong></a>
+            <a class="next" href="rich.html"><span>Newer</span><strong>Rich Dad Poor Dad</strong></a>
+        </nav>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="socials">
-            <!-- GitHub -->
-            <a href="https://github.com/L0oter1" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a>
-        
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
             <p>Designed and Created by Jeffrey Thi</p>
+            <div class="socials">
+                <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="../src/contact.html" aria-label="Contact"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            </div>
         </div>
-
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="script.js"></script>
-
+    <script src="../script.js"></script>
 </body>
 </html>

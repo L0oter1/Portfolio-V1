@@ -4,96 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeffrey Thi</title>
+    <meta name="description" content="Jeffrey Thi — Math-CS major and Business minor at UC San Diego. Projects, book reviews, and a bit about me.">
+    <meta name="author" content="Jeffrey Thi">
+    <meta name="theme-color" content="#0d1117">
 
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="img/jeff.ico" type="image/x-icon">
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/jeff.ico" type="image/x-icon">
-
-    <!-- Optional: Meta Tags -->
-    <meta name="description" content="Jeffrey Thi's Portfolio Website">
-    <meta name="author" content="Jeffrey Thi">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul class="nav">
-                <li><a href="./index.html">Home</a></li>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="./index.html">
+                <span class="brand-mark" aria-hidden="true">JT</span>
+                <span class="brand-name">Jeffrey Thi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="./index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="src/project.html">Projects</a></li>
                 <li><a href="src/book.html">Books</a></li>
+                <li><a href="src/writing.html">Writing</a></li>
                 <li><a href="src/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
     <main>
-        <div class="wallpaper-container">
-            <h1>Hello, my name is Jeffrey Thi</h1>
-            <p>
-                I'm a Math-CS major and Business minor at UC San Diego.
-                <br>
-                Passionate about new tech, startups, and finance.
-            </p>
-        </div>
-        <section id="languages">
-            <h2>Languages I've Used</h2>
+        <!-- Hero -->
+        <section class="hero">
+            <img class="hero-bg" src="img/hero.jpg" alt="" aria-hidden="true" fetchpriority="high">
+            <div class="hero-overlay" aria-hidden="true"></div>
 
-            <div class="language-container">
-                <div class="language-item">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-            </div>
-            <div class="language-item">
-                <i class="fab fa-java"></i>
-                <p>Java</p>
-            </div>
-            <div class="language-item">
-                <i class="fab fa-html5"></i>
-                <p>HTML5</p>
-            </div>
-            <div class="language-item">
-                <i class="fab fa-css3-alt"></i>
-                <p>CSS3</p>
-            </div>
-            <div class="language-item">
-                <i class="fab fa-js-square"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="language-item">
-                <i class="devicon-cplusplus-plain"></i>
-                <p>C++</p>
-            </div>
-            <div class="language-item">
-                <i class="devicon-git-plain"></i>
-                <p>Git</p>
+            <div class="hero-content container">
+                <p class="eyebrow">Math-CS &middot; Business minor &middot; UC San Diego</p>
+                <h1>Hello, I'm <span class="gradient-text">Jeffrey Thi</span>.</h1>
+                <p class="hero-sub">
+                    I'm a Math-CS major and Business minor at UC San Diego, passionate about new tech, startups, and finance.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="src/project.html">
+                        View projects <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-ghost" href="src/contact.html">Get in touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
 
-            <p id="description">Clicking on an Icon gives you a quick description of my experiences</p>
+            <a class="scroll-cue" href="#skills" aria-label="Scroll to skills"><span></span></a>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <p class="eyebrow">01 &mdash; Skills</p>
+                    <h2>Languages I've used</h2>
+                    <p class="lead">Click an icon for a quick note on where I picked it up and what I built with it.</p>
+                </div>
+
+                <div class="skills-grid reveal" role="tablist" aria-label="Languages">
+                    <button class="skill" role="tab" data-skill="python" aria-selected="true" aria-controls="skill-panel">
+                        <i class="fab fa-python" aria-hidden="true"></i><span>Python</span>
+                    </button>
+                    <button class="skill" role="tab" data-skill="java" aria-selected="false" aria-controls="skill-panel">
+                        <i class="fab fa-java" aria-hidden="true"></i><span>Java</span>
+                    </button>
+                    <button class="skill" role="tab" data-skill="html" aria-selected="false" aria-controls="skill-panel">
+                        <i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span>
+                    </button>
+                    <button class="skill" role="tab" data-skill="css" aria-selected="false" aria-controls="skill-panel">
+                        <i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span>
+                    </button>
+                    <button class="skill" role="tab" data-skill="javascript" aria-selected="false" aria-controls="skill-panel">
+                        <i class="fab fa-js" aria-hidden="true"></i><span>JavaScript</span>
+                    </button>
+                    <button class="skill" role="tab" data-skill="cpp" aria-selected="false" aria-controls="skill-panel">
+                        <i class="devicon-cplusplus-plain" aria-hidden="true"></i><span>C++</span>
+                    </button>
+                    <button class="skill" role="tab" data-skill="git" aria-selected="false" aria-controls="skill-panel">
+                        <i class="devicon-git-plain" aria-hidden="true"></i><span>Git</span>
+                    </button>
+                </div>
+
+                <div class="skill-panel reveal" id="skill-panel" role="tabpanel" aria-live="polite">
+                    <div class="skill-panel-content" id="skill-panel-content">
+                        <div class="skill-panel-head">
+                            <i class="fab fa-python" aria-hidden="true"></i>
+                            <h3>Python</h3>
+                        </div>
+                        <ul>
+                            <li>I have used Python for most of my personal projects.</li>
+                            <li>Something that stood out to me was the amount of, in a sense, non-programming work you have to do to push code to production.</li>
+                            <li>One project I enjoyed was using Python to test out a type of machine learning algorithm called NEAT.</li>
+                            <li>A project I'm very proud of is my Discord music bot.</li>
+                            <li>My friends used to bond over playing music for each other, so coding this was amazing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <p class="eyebrow">02 &mdash; Projects</p>
+                    <h2>Things I've built</h2>
+                    <p class="lead">A few favorites. Hackathon wins, machine learning experiments, and tools I actually use.</p>
+                </div>
+
+                <div class="cards">
+                    <article class="card reveal" data-delay="1">
+                        <a class="card-media" href="https://devpost.com/software/enviroskin" target="_blank" rel="noopener">
+                            <img src="img/enviroskin.png" alt="EnviroSkin on Devpost with a winner ribbon" loading="lazy">
+                        </a>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag tag-accent">2nd place</span>
+                                <span class="tag">DataHacks 2026</span>
+                                <span class="tag">LLM</span>
+                                <span class="tag">ML</span>
+                            </div>
+                            <h3><a href="https://github.com/2339140098NC/EnviroSkin" target="_blank" rel="noopener">EnviroSkin</a></h3>
+                            <p>Uses LLM wrapping and a machine learning model to identify skin conditions. Won 2nd place in the Entrepreneur track.</p>
+                            <div class="card-links">
+                                <a class="icon-link" href="https://github.com/2339140098NC/EnviroSkin" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a class="icon-link" href="https://devpost.com/software/enviroskin" target="_blank" rel="noopener"><i class="fas fa-trophy" aria-hidden="true"></i> Devpost</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-delay="2">
+                        <div class="card-media">
+                            <img src="img/stock.png" alt="Trading analysis dashboard with candlestick chart and indicators" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag">Lovable</span>
+                                <span class="tag">Finance</span>
+                                <span class="tag">Indicators</span>
+                            </div>
+                            <h3>Trading Analysis</h3>
+                            <p>Vibe coded to oblivion on Lovable. Momentum, SMA 20/50/200, a stop-loss and take-profit calculator, a market scanner, and entry indicators.</p>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-delay="3">
+                        <a class="card-media" href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank" rel="noopener">
+                            <img src="img/flappy.png" alt="NEAT Flappy Bird running in PyGame next to its Python source" loading="lazy">
+                        </a>
+                        <div class="card-body">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">PyGame</span>
+                                <span class="tag">NEAT</span>
+                            </div>
+                            <h3><a href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank" rel="noopener">NEAT Flappy Bird</a></h3>
+                            <p>Exploration of NeuroEvolution of Augmenting Topologies (NEAT) by implementing Flappy Bird with PyGame and testing out different learning functions.</p>
+                            <div class="card-links">
+                                <a class="icon-link" href="https://github.com/L0oter1/NEAT-AI-Learns-flappy-bird-but-with-cannons" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-foot reveal">
+                    <a class="link-arrow" href="src/project.html">All projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent reads -->
+        <section id="books" class="section">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <p class="eyebrow">03 &mdash; Books</p>
+                    <h2>Recent reads</h2>
+                    <p class="lead">I try to read at least a couple of pages a day and write a short review of each book.</p>
+                </div>
+
+                <div class="bookshelf bookshelf-compact">
+                    <a class="book-card reveal" data-delay="1" href="books/stumbling.html">
+                        <div class="book-cover"><img src="img/stumbling.jpg" alt="Stumbling on Happiness cover" loading="lazy"></div>
+                        <h3>Stumbling on Happiness</h3>
+                        <span class="meta">Oct 25, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="2" href="books/rental.html">
+                        <div class="book-cover"><img src="img/rental.jpg" alt="The Book on Rental Property Investing cover" loading="lazy"></div>
+                        <h3>The Book on Rental Property Investing</h3>
+                        <span class="meta">Sep 20, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="3" href="books/never.html">
+                        <div class="book-cover"><img src="img/never.jpg" alt="Never Split the Difference cover" loading="lazy"></div>
+                        <h3>Never Split the Difference</h3>
+                        <span class="meta">Jun 7, 2026</span>
+                    </a>
+                </div>
+
+                <div class="section-foot reveal">
+                    <a class="link-arrow" href="src/book.html">All book reviews <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing -->
+        <section id="writing" class="section">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <p class="eyebrow">04 &mdash; Writing</p>
+                    <h2>Philosophy</h2>
+                    <p class="lead">Essays and half-formed thoughts on how to live, work, and think.</p>
+                </div>
+
+                <div class="essay-list narrow reveal">
+                    <a class="essay-row" href="writing/uncomfortable.html">
+                        <span class="meta">Oct 27, 2026</span>
+                        <div>
+                            <h3>On being uncomfortable</h3>
+                            <p>Why my theme for the year is doing the thing that makes me squirm.</p>
+                        </div>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="section-foot reveal">
+                    <a class="link-arrow" href="src/writing.html">All writing <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="socials">
-            <a href="https://github.com/L0oter1" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
             <p>Designed and Created by Jeffrey Thi</p>
+            <div class="socials">
+                <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="src/contact.html" aria-label="Contact">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
     <script src="script.js"></script>
-
 </body>
 </html>

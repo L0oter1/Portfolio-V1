@@ -3,107 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
-
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Books &middot; Jeffrey Thi</title>
+    <meta name="description" content="Short reviews of the books Jeffrey Thi has been reading.">
+    <meta name="author" content="Jeffrey Thi">
+    <meta name="theme-color" content="#0d1117">
 
     <!-- Favicon -->
-    <link rel="icon" href="../img/jeff.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../img/jeff.ico" type="image/x-icon">
 
-    <!-- Optional: Meta Tags -->
-    <meta name="description" content="Book Reviews">
-    <meta name="author" content="Jeffrey Thi">
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav class="nav">
-            <ul class="nav">
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark" aria-hidden="true">JT</span>
+                <span class="brand-name">Jeffrey Thi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="project.html">Projects</a></li>
-                <li><a href="book.html">Books</a></li>
+                <li><a href="book.html" class="active" aria-current="page">Books</a></li>
+                <li><a href="writing.html">Writing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main class="content">
-        <h2>Book Review</h2>
-        <ul class="books">
-            <li>
-                <a href="../books/how_to_swing_trade.html">How to Swing Trade</a>
-                <p class="date">May 17th 2026</p>
-            </li>
-            <li>
-                <a href="../books/cinder.html">Cinder Series</a>
-                <p class="date">March 13th 2026</p>
-            </li>
-            <li>
-                <a href="../books/crown.html">3 Dark Crowns Series</a>
-                <p class="date">January 15th 2026</p>
-            </li>
-            <li>
-                <a href="../books/effective.html">7 Habits of Highly Effective People</a>
-                <p class="date">December 7th 2025</p>
-            </li>
-            <li>
-                <a href="../books/rich.html">Rich Dad Poor Dad</a>
-                <p class="date">October 5th, 2025</p>
-            </li>
-            <li>
-                <a href="../books/elon.html">Elon Musk</a>
-                <p class="date">October 2nd, 2025</p>
-            </li>
-            <li>
-                <a href="../books/art.html">The Subtle Art of Not Giving a F*ck</a>
-                <p class="date">September 30th, 2025</p>
-            </li>
-            <li>
-                <a href="../books/breathe.html">When Breathe Becomes Air</a>
-                <p class="date">September 27th, 2025</p>
-            </li>
-            <li>
-                <a href="../books/tipping.html">The Tipping Point</a>
-                <p class="date">September 25th, 2025</p>
-            </li>
-        </ul>
-        <br>
-        <p>“Go to bed smarter than when you woke up.” — Charlie Munger</p>
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <p class="eyebrow">Books</p>
+                <h1>Book reviews</h1>
+                <blockquote class="quote">
+                    &ldquo;Go to bed smarter than when you woke up.&rdquo;
+                    <cite>Charlie Munger</cite>
+                </blockquote>
+            </div>
+        </section>
 
-        <p style="max-width: 700px;">When I watched a documentary about Warren Buffet in middle school during a scout meeting, he said 
-            a quote similar to this which resonated with me. When I was a middle schooler I didn't really read other than the required one but, when I got to 
-            college, I thought I could spend more time reading instead of watching social media shorts or entertaining videos. So I try to read at least a couple pages 
-            a day.
-            <br>
-            <br>
-            I don't view every book as learning something but I feel reading books can sometimes offer a new perspective on things or make you ask yourself interesting questions
-            based on how and what the author writes. 
-        </p>
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="bookshelf">
+                    <a class="book-card reveal" href="../books/stumbling.html">
+                        <div class="book-cover"><img src="../img/stumbling.jpg" alt="Stumbling on Happiness cover" loading="lazy"></div>
+                        <h3>Stumbling on Happiness</h3>
+                        <span class="meta">Oct 25, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="1" href="../books/rental.html">
+                        <div class="book-cover"><img src="../img/rental.jpg" alt="The Book on Rental Property Investing cover" loading="lazy"></div>
+                        <h3>The Book on Rental Property Investing</h3>
+                        <span class="meta">Sep 20, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="2" href="../books/never.html">
+                        <div class="book-cover"><img src="../img/never.jpg" alt="Never Split the Difference cover" loading="lazy"></div>
+                        <h3>Never Split the Difference</h3>
+                        <span class="meta">Jun 7, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="3" href="../books/how_to_swing_trade.html">
+                        <div class="book-cover"><img src="../img/trade.jpg" alt="How to Swing Trade cover" loading="lazy"></div>
+                        <h3>How to Swing Trade</h3>
+                        <span class="meta">May 17, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="1" href="../books/cinder.html">
+                        <div class="book-cover"><img src="../img/cinder.jpg" alt="Cinder cover" loading="lazy"></div>
+                        <h3>Cinder Series</h3>
+                        <span class="meta">Mar 13, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="2" href="../books/crown.html">
+                        <div class="book-cover"><img src="../img/3_dark_crowns.jpg" alt="Three Dark Crowns cover" loading="lazy"></div>
+                        <h3>Three Dark Crowns</h3>
+                        <span class="meta">Jan 15, 2026</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="3" href="../books/effective.html">
+                        <div class="book-cover"><img src="../img/effective.jpg" alt="The 7 Habits of Highly Effective People cover" loading="lazy"></div>
+                        <h3>7 Habits of Highly Effective People</h3>
+                        <span class="meta">Dec 7, 2025</span>
+                    </a>
+                    <a class="book-card reveal" href="../books/rich.html">
+                        <div class="book-cover"><img src="../img/rich.jpg" alt="Rich Dad Poor Dad cover" loading="lazy"></div>
+                        <h3>Rich Dad Poor Dad</h3>
+                        <span class="meta">Oct 5, 2025</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="1" href="../books/elon.html">
+                        <div class="book-cover"><img src="../img/elon.jpg" alt="Elon Musk cover" loading="lazy"></div>
+                        <h3>Elon Musk</h3>
+                        <span class="meta">Oct 2, 2025</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="2" href="../books/art.html">
+                        <div class="book-cover"><img src="../img/art.jpg" alt="The Subtle Art of Not Giving a F*ck cover" loading="lazy"></div>
+                        <h3>The Subtle Art of Not Giving a F*ck</h3>
+                        <span class="meta">Sep 30, 2025</span>
+                    </a>
+                    <a class="book-card reveal" data-delay="3" href="../books/breathe.html">
+                        <div class="book-cover"><img src="../img/breathe.jpg" alt="When Breath Becomes Air cover" loading="lazy"></div>
+                        <h3>When Breath Becomes Air</h3>
+                        <span class="meta">Sep 27, 2025</span>
+                    </a>
+                    <a class="book-card reveal" href="../books/tipping.html">
+                        <div class="book-cover"><img src="../img/tipping.jpg" alt="The Tipping Point cover" loading="lazy"></div>
+                        <h3>The Tipping Point</h3>
+                        <span class="meta">Sep 25, 2025</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="note reveal">
+                    <p class="eyebrow">Why I read</p>
+                    <h2>A couple of pages a day</h2>
+                    <p>
+                        When I watched a documentary about Warren Buffett in middle school during a scout meeting, he said
+                        a quote similar to this which resonated with me. When I was a middle schooler I didn't really read other than the required one but, when I got to
+                        college, I thought I could spend more time reading instead of watching social media shorts or entertaining videos. So I try to read at least a couple pages
+                        a day.
+                    </p>
+                    <p>
+                        I don't view every book as learning something but I feel reading books can sometimes offer a new perspective on things or make you ask yourself interesting questions
+                        based on how and what the author writes.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="socials">
-            <a href="https://github.com/L0oter1" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
             <p>Designed and Created by Jeffrey Thi</p>
+            <div class="socials">
+                <a href="https://github.com/L0oter1" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/jeffrey-thi" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="contact.html" aria-label="Contact">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
     <script src="../script.js"></script>
-
-    </footer>
-
-    <!-- JavaScript Files -->
-    <script src="script.js"></script>
-
 </body>
 </html>
